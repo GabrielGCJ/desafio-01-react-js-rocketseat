@@ -1,8 +1,11 @@
+import { Header } from "./components/header/Header"
 import "./global.css"
 
 export const App = () => {
 
   return (
-    <h1>App</h1>
+    <div>
+        <Header/>
+    </div>
   )
 }

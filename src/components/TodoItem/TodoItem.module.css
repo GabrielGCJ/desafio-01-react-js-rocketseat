@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;  
-    padding: 0.5rem;
+    padding: 0.4rem;
     
 }
 
@@ -29,6 +29,10 @@
 
 .circle{
     color: var(--blue-300);
+}
+
+.circle concluded:false {
+    color: var(red);
 }
 
 .trash{

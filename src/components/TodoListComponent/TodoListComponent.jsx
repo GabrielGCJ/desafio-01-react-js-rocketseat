@@ -1,4 +1,5 @@
 import { NoTodoComponent } from "../NoTodoComponent/NoTodoComponent"
+import { TodoItem } from "../TodoItem/TodoItem"
 import styles from "./TodoListComponent.module.css"
 
 export const TodoListComponent = () => {
@@ -36,8 +37,14 @@ export const TodoListComponent = () => {
                 </div>
 
             </div>
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+            
 
-            <NoTodoComponent />
+            {/* <NoTodoComponent /> */}
         </div>
     )
 }

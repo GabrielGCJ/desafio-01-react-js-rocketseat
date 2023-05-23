@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./TodoItem.module.css"
-import { Circle, CheckCircle, Trash } from "phosphor-react";
+import { Trash } from "phosphor-react";
 import concludedTrue from "../../assets/concludedTrue.svg"
 import concludedFalse from "../../assets/concludedFalse.svg"
 

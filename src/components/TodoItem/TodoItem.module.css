@@ -1,0 +1,36 @@
+.containerTodoItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    padding: 0.5rem;
+    
+}
+
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 46rem;
+    height: 4.5rem;
+    border-radius: 8px;
+    background: var(--gray-500);
+    text-align: center;
+}
+
+.todoItem button{   
+    background: var(--gray-500);
+    border: transparent;
+    margin: 1rem;
+    padding-bottom: 0.7rem;
+}
+
+
+.circle{
+    color: var(--blue-300);
+}
+
+.trash{
+    color: var(--gray-300);
+}

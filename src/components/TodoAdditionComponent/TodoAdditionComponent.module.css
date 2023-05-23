@@ -5,6 +5,7 @@
     align-items: center;
     margin-top: calc(0px - 1.2rem - 6px);
     /* width: 46rem; */
+    margin: 0rem 1rem;
 }
 
 .toDoForm textarea {

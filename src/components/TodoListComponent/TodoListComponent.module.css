@@ -1,0 +1,56 @@
+.todoList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 1rem;
+}
+
+.todoList p {
+    font-size: 1rem;
+}
+
+.todoInformation {
+    display: flex;
+    justify-content: space-between;
+    width: 46rem;
+    height: 1.18rem;
+}
+
+.textInformation {
+    display: flex;
+    flex-direction: row;
+}
+
+.numberCreatedTodo {
+    display: flex;
+    justify-content: center;
+    background: var(--gray-400);
+    border-radius: 50px;
+    min-width: 1.5rem;
+    /* text-align: center; */
+    margin: 0 0 0 0.5rem;
+    padding: 5px 5px;
+    align-items: center;
+}
+
+.numberConcludedTodo {
+    display: flex;
+    justify-content: center;
+    background: var(--gray-400);
+    border-radius: 50px;
+    min-width: 3.9rem;
+    text-align: center;
+    margin: 0 0 0 0.5rem;
+    padding: 5px 5px;
+    align-items: center;
+}
+
+.text1{
+    color: var(--blue-300);
+}
+
+.text2{
+    color: var(--purple-300);
+}
+

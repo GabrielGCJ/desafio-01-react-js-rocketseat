@@ -33,7 +33,7 @@ export const App = () => {
 
   const editTodoConcluded = (editTodo) => {
 
-    let objeto = toDo.find(obj => obj.text === editTodo);
+    let objeto = toDo.find(obj => obj.id === editTodo);
 
     if (objeto) {
       if (objeto.isConcluded === "false") {
@@ -63,14 +63,9 @@ export const App = () => {
 
   const deleteTodo = (toDoToDelete) => {
 
-    const newToDo = toDo.filter(todo => todo.text !== toDoToDelete);
+    const newToDo = toDo.filter(todo => todo.id !== toDoToDelete);
 
     setToDo(newToDo)
-
-
-    // if(editCountCompletedToDo() < 0){
-    //   setCountCompletedToDo(0)
-    // }
   }
 
   
@@ -109,6 +104,7 @@ export const App = () => {
         toDo.map(toDo => {
           return (
             <TodoItem
+              id={toDo.id}
               key={toDo.id}
               text={toDo.text}
               isConcluded={toDo.isConcluded}

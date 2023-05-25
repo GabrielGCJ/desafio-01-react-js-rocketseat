@@ -5,7 +5,7 @@ import concludedTrue from "../../assets/concludedTrue.svg"
 import concludedFalse from "../../assets/concludedFalse.svg"
 
 
-    export const TodoItem = ({text, isConcluded, deleteTodo, editTodoConcluded, editCountCompletedToDo}) => {
+    export const TodoItem = ({id, text, isConcluded, deleteTodo, editTodoConcluded, editCountCompletedToDo}) => {
 
     // const [concluded, setConcluded] = useState("false")
 
@@ -17,13 +17,13 @@ import concludedFalse from "../../assets/concludedFalse.svg"
     // }
 
     const handleDeleteToDo = () => {
-        deleteTodo(text)
+        deleteTodo(id)
 
         // console.log("teste 123")
     }
 
     const handleClick = () => {
-        editTodoConcluded(text)
+        editTodoConcluded(id)
         editCountCompletedToDo()
     }
 

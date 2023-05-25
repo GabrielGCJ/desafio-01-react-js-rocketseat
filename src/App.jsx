@@ -1,12 +1,14 @@
 import { useState } from "react"
+
 import { Header } from "./components/Header/Header"
 import { TodoAdditionComponent } from "./components/TodoAdditionComponent/TodoAdditionComponent"
-import { TodoItem } from "./components/TodoItem/TodoItem"
 import { TodoListComponent } from "./components/TodoListComponent/TodoListComponent"
+import { NoTodoComponent } from "./components/NoTodoComponent/NoTodoComponent"
+import { TodoItem } from "./components/TodoItem/TodoItem"
+
 import "./global.css"
 
 import { v4 as uuidv4 } from 'uuid'
-import { NoTodoComponent } from "./components/NoTodoComponent/NoTodoComponent"
 
 export const App = () => {
 

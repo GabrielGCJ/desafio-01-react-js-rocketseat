@@ -1,5 +1,4 @@
-import { NoTodoComponent } from "../NoTodoComponent/NoTodoComponent"
-import { TodoItem } from "../TodoItem/TodoItem"
+
 import styles from "./TodoListComponent.module.css"
 
 export const TodoListComponent = (props) => {

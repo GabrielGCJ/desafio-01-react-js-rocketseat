@@ -2,7 +2,7 @@ import { NoTodoComponent } from "../NoTodoComponent/NoTodoComponent"
 import { TodoItem } from "../TodoItem/TodoItem"
 import styles from "./TodoListComponent.module.css"
 
-export const TodoListComponent = () => {
+export const TodoListComponent = (props) => {
 
     return (
 
@@ -19,7 +19,7 @@ export const TodoListComponent = () => {
                         </strong>
 
                         <div className={styles.numberCreatedTodo}>
-                            <p>10</p>
+                            <p>{props.numberOfToDo}</p>
                         </div>
                     </div>
 
@@ -30,18 +30,18 @@ export const TodoListComponent = () => {
                         </strong>
 
                         <div className={styles.numberConcludedTodo}>
-                            <p>3 de 10</p>
+                            <p>n de {props.numberOfToDo}</p>
                         </div>
                     </div>
 
                 </div>
 
             </div>
+            {/* <TodoItem/>
             <TodoItem/>
             <TodoItem/>
             <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
+            <TodoItem/> */}
             
 
             {/* <NoTodoComponent /> */}

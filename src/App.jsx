@@ -5,6 +5,8 @@ import { TodoItem } from "./components/TodoItem/TodoItem"
 import { TodoListComponent } from "./components/TodoListComponent/TodoListComponent"
 import "./global.css"
 
+import { v4 as uuidv4 } from 'uuid'
+
 export const App = () => { 
 
   const [toDo, setToDo] = useState([
@@ -44,7 +46,7 @@ export const App = () => {
     const newTodoText = event.target.addtodo.value
 
     setToDo([...toDo, {
-      id:"5",
+      id:uuidv4(),
       text: newTodoText,
       isConcluded: "false"
     }])

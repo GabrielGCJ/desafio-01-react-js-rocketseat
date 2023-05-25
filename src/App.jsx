@@ -7,7 +7,7 @@ import "./global.css"
 
 import { v4 as uuidv4 } from 'uuid'
 
-export const App = () => { 
+export const App = () => {
 
   const [toDo, setToDo] = useState([
     {
@@ -16,7 +16,7 @@ export const App = () => {
       isConcluded: "false",
       // createdAt: Date,
       // concludedAt: Date,
-    },  
+    },
     {
       id: "2",
       text: "meu texto 2",
@@ -33,7 +33,46 @@ export const App = () => {
     }
   ])
 
-  const deleteTodo = (toDoToDelete) => {  
+  const [countCompletedToDo, setCountCompletedToDo] = useState(2)  
+  
+
+  const editTodoConcluded = (editTodo) => {
+
+    const ToDoEdited = toDo.filter(todo => todo.text === editTodo);
+
+    // console.log(ToDoEdited)
+
+
+    let minhaArray = toDo
+
+
+    minhaArray.map(item => {
+      if (item === editTodo) {
+        if (item.isConcluded === "false") {
+          item.isConcluded = "true";
+        } else {
+          item.isConcluded = "false";
+        }
+      }
+      return item;
+    });  
+
+    console.log(minhaArray)
+  };
+
+  const editCountCompletedToDo = () => {
+    let count = 0;
+  
+    toDo.map(todo => {
+      if (todo.isConcluded === "false") {
+        count += 1;
+      }
+    });
+  
+    setCountCompletedToDo(count) ;
+  }
+
+  const deleteTodo = (toDoToDelete) => {
 
     const newToDo = toDo.filter(todo => todo.text !== toDoToDelete);
 
@@ -46,31 +85,25 @@ export const App = () => {
     const newTodoText = event.target.addtodo.value
 
     setToDo([...toDo, {
-      id:uuidv4(),
+      id: uuidv4(),
       text: newTodoText,
       isConcluded: "false"
-    }])
-
-    // setToDo([...toDo,  newTodoText ])
-
-    // setNewCommentText("")
-
-    // console.log(event.target.addtodo)
-    // console.log(event.target.addtodo.value)
-}
+    }])    
+  }
 
   return (
 
     <div>
       <Header />
 
-      <TodoAdditionComponent 
+      <TodoAdditionComponent
         handleCreateNewToDo={handleCreateNewToDo}
-      
+
       />
 
       <TodoListComponent
-        numberOfToDo={toDo.length} 
+        numberOfToDo={toDo.length}
+        countCompletedToDo={countCompletedToDo}
       />
 
       {toDo.map(toDo => {
@@ -80,6 +113,8 @@ export const App = () => {
             text={toDo.text}
             isConcluded={toDo.isConcluded}
             deleteTodo={deleteTodo}
+            editTodoConcluded={editTodoConcluded}
+            editCountCompletedToDo={editCountCompletedToDo}
           />
         )
       })}

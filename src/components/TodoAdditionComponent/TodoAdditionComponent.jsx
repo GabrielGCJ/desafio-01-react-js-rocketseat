@@ -59,9 +59,7 @@ export const TodoAdditionComponent = ({ handleCreateNewToDo }) => {
 
     const handleNewToDoChange = (event) => {
 
-        setNewToDoText(event.target.value);
-
-        
+        setNewToDoText(event.target.value);        
     }
 
     const handleSubmit = (event) => {

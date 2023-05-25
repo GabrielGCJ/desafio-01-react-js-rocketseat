@@ -30,7 +30,7 @@ export const TodoListComponent = (props) => {
                         </strong>
 
                         <div className={styles.numberConcludedTodo}>
-                            <p>n de {props.numberOfToDo}</p>
+                            <p>{props.countCompletedToDo} de {props.numberOfToDo}</p>
                         </div>
                     </div>
 

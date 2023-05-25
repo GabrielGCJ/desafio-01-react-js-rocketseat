@@ -5,7 +5,7 @@ import concludedTrue from "../../assets/concludedTrue.svg"
 import concludedFalse from "../../assets/concludedFalse.svg"
 
 
-    export const TodoItem = ({text, isConcluded, deleteTodo}) => {
+    export const TodoItem = ({text, isConcluded, deleteTodo, editTodoConcluded, editCountCompletedToDo}) => {
 
     // const [concluded, setConcluded] = useState("false")
 
@@ -22,6 +22,11 @@ import concludedFalse from "../../assets/concludedFalse.svg"
         // console.log("teste 123")
     }
 
+    const handleClick = () => {
+        editTodoConcluded(text)
+        editCountCompletedToDo()
+    }
+
 
 
     return (
@@ -31,7 +36,8 @@ import concludedFalse from "../../assets/concludedFalse.svg"
                 <button
                     // concluded={concluded}
                     // className={styles.circle}
-                    // onClick={editConcluded}
+                    onClick={ handleClick }  
+                                     
                      >
 
                     {isConcluded === "true" ? (<img src={concludedTrue} alt="concludedTrue" />) : (<img src={concludedFalse} alt="concludedFalse" />)}
@@ -40,7 +46,12 @@ import concludedFalse from "../../assets/concludedFalse.svg"
 
                 <p>{text}</p>
 
-                <button className={styles.trash}><Trash size={20} onClick={handleDeleteToDo} title="Deletar ToDo " /></button>
+                <button 
+                    className={styles.trash}><Trash 
+                    size={20} 
+                    onClick={handleDeleteToDo} 
+                    title="Deletar ToDo " />
+                </button>
 
             </div>
 

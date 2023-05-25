@@ -5,33 +5,42 @@ import concludedTrue from "../../assets/concludedTrue.svg"
 import concludedFalse from "../../assets/concludedFalse.svg"
 
 
-export const TodoItem = () => {
+    export const TodoItem = ({text, isConcluded, deleteTodo}) => {
 
-    const [concluded, setConcluded] = useState("false")
+    // const [concluded, setConcluded] = useState("false")
 
-    const editConcluded = () => {
-        if (concluded === "false") {
-            setConcluded("true")
-        } 
-        else { setConcluded("false")  }
+    // const editConcluded = () => {
+    //     if (concluded === "false") {
+    //         setConcluded("true")
+    //     } 
+    //     else { setConcluded("false")  }
+    // }
+
+    const handleDeleteToDo = () => {
+        deleteTodo(text)
+
+        // console.log("teste 123")
     }
+
+
 
     return (
         <div className={styles.containerTodoItem}>
 
             <div className={styles.todoItem}>
                 <button
-                    concluded={concluded}
-                    className={styles.circle}
-                    onClick={editConcluded} >
+                    // concluded={concluded}
+                    // className={styles.circle}
+                    // onClick={editConcluded}
+                     >
 
-                    {concluded === "true" ? (<img src={concludedTrue} alt="concludedTrue" />) : (<img src={concludedFalse} alt="concludedFalse" />)}
+                    {isConcluded === "true" ? (<img src={concludedTrue} alt="concludedTrue" />) : (<img src={concludedFalse} alt="concludedFalse" />)}
 
                 </button>
 
-                <p>Em meio às adversidades da vida, lembre-se sempre de que cada obstáculo é uma oportunidade disfarçada de crescimento. Você é capaz de superar qualquer desafio que surgir em seu caminho, desde que mantenha a chama da determinação acesa em seu coração</p>
+                <p>{text}</p>
 
-                <button className={styles.trash}><Trash size={20} /></button>
+                <button className={styles.trash}><Trash size={20} onClick={handleDeleteToDo} title="Deletar ToDo " /></button>
 
             </div>
 

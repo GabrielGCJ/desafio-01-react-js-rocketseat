@@ -57,6 +57,8 @@ export const App = () => {
     });
 
     setCountCompletedToDo(count);
+
+    return count
   }
 
   const deleteTodo = (toDoToDelete) => {
@@ -64,7 +66,14 @@ export const App = () => {
     const newToDo = toDo.filter(todo => todo.text !== toDoToDelete);
 
     setToDo(newToDo)
+
+
+    // if(editCountCompletedToDo() < 0){
+    //   setCountCompletedToDo(0)
+    // }
   }
+
+  
 
   const handleCreateNewToDo = (event) => {
     event.preventDefault()
@@ -78,11 +87,7 @@ export const App = () => {
     }])
   }
 
-  const numberOfToDo = toDo.length
-
-  if (numberOfToDo === 0) {
-
-  }
+  const numberOfToDo = toDo.length  
 
   return (
 

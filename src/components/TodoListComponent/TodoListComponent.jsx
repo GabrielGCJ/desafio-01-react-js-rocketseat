@@ -37,14 +37,7 @@ export const TodoListComponent = (props) => {
                 </div>
 
             </div>
-            {/* <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/> */}
-            
-
-            {/* <NoTodoComponent /> */}
+           
         </div>
     )
 }

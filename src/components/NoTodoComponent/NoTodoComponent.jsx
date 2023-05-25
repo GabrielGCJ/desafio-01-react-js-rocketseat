@@ -1,11 +1,12 @@
 import styles from "./NoTodoComponent.module.css"
+import clipboard from "../../assets/clipboard.svg"
 
 export const NoTodoComponent = () => {
     return (
         <div className={styles.noTodoComponentContainer}>
             <div className={styles.noTodoComponent}>
                 <div>
-                    <p>img</p>
+                    <img src={clipboard}/>
                 </div>
                 <div>
                     <strong>

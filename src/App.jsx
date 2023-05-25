@@ -70,10 +70,7 @@ export const App = () => {
 
   
 
-  const handleCreateNewToDo = (event) => {
-    event.preventDefault()
-
-    const newTodoText = event.target.addtodo.value
+  const handleCreateNewToDo = (newTodoText) => {   
 
     setToDo([...toDo, {
       id: uuidv4(),

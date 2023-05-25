@@ -7,20 +7,23 @@ export const TodoAdditionComponent = ({ handleCreateNewToDo }) => {
 
     const handleNewToDoChange = (event) => {
 
-        setNewToDoText(event.target.value);        
+        event.target.setCustomValidity("")
+
+        setNewToDoText(event.target.value);     
+        
     }
 
-    const handleSubmit = (event) => {
+    const handleCreateToDo = (event) => {
         event.preventDefault();
 
-        console.log(newToDoText)
+        handleCreateNewToDo(newToDoText)
 
         setNewToDoText("")
     }
 
     return (
         <form className={styles.toDoForm} 
-        onSubmit={handleCreateNewToDo}>
+        onSubmit={handleCreateToDo}>
             <textarea
                 name="addtodo"
                 placeholder="Adicione uma nova tarefa"

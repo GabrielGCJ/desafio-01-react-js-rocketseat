@@ -5,25 +5,25 @@ import { TodoItem } from "./components/TodoItem/TodoItem"
 import { TodoListComponent } from "./components/TodoListComponent/TodoListComponent"
 import "./global.css"
 
-export const App = () => {
+export const App = () => { 
 
   const [toDo, setToDo] = useState([
     {
-      id: "jygfikweuy",
+      id: "1",
       text: "meu texto",
       isConcluded: "false",
       // createdAt: Date,
       // concludedAt: Date,
     },  
     {
-      id: "jygfrtwtikweuy",
+      id: "2",
       text: "meu texto 2",
       isConcluded: "true",
       // createdAt: Date,
       // concludedAt: Date,
     },
     {
-      id: "jygfrtwthrtdhtrikweuy",
+      id: "3",
       text: "meu texto 3",
       isConcluded: "true",
       // createdAt: Date,
@@ -36,15 +36,36 @@ export const App = () => {
     const newToDo = toDo.filter(todo => todo.text !== toDoToDelete);
 
     setToDo(newToDo)
+  }
+
+  const handleCreateNewToDo = () => {
+    event.preventDefault()
+
+    const newTodoText = event.target.addtodo.value
+
+    setToDo([...toDo, {
+      id:"5",
+      text: newTodoText,
+      isConcluded: "false"
+    }])
+
+    // setToDo([...toDo,  newTodoText ])
+
+    // setNewCommentText("")
+
+    // console.log(event.target.addtodo)
+    // console.log(event.target.addtodo.value)
 }
 
-
-
   return (
+
     <div>
       <Header />
 
-      <TodoAdditionComponent />
+      <TodoAdditionComponent 
+        handleCreateNewToDo={handleCreateNewToDo}
+      
+      />
 
       <TodoListComponent
         numberOfToDo={toDo.length} 

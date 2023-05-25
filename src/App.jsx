@@ -6,6 +6,7 @@ import { TodoListComponent } from "./components/TodoListComponent/TodoListCompon
 import "./global.css"
 
 import { v4 as uuidv4 } from 'uuid'
+import { NoTodoComponent } from "./components/NoTodoComponent/NoTodoComponent"
 
 export const App = () => {
 
@@ -13,23 +14,17 @@ export const App = () => {
     {
       id: "1",
       text: "meu texto",
-      isConcluded: "false",
-      // createdAt: Date,
-      // concludedAt: Date,
+      isConcluded: "false"
     },
     {
       id: "2",
       text: "meu texto 2",
-      isConcluded: "true",
-      // createdAt: Date,
-      // concludedAt: Date,
+      isConcluded: "true"
     },
     {
       id: "3",
       text: "meu texto 3",
-      isConcluded: "true",
-      // createdAt: Date,
-      // concludedAt: Date,
+      isConcluded: "true"
     }
   ])
 
@@ -37,27 +32,26 @@ export const App = () => {
 
 
   const editTodoConcluded = (editTodo) => {
-   
-      let objeto = toDo.find(obj => obj.text === editTodo);
-      
-      if (objeto) {
-        if(objeto.isConcluded === "false"){
-          objeto.isConcluded = "true";
-        } 
-        else if(objeto.isConcluded === "true")
-        {
-          objeto.isConcluded = "false";
-        }
-      }        
 
-      setToDo([...toDo])
+    let objeto = toDo.find(obj => obj.text === editTodo);
+
+    if (objeto) {
+      if (objeto.isConcluded === "false") {
+        objeto.isConcluded = "true";
+      }
+      else if (objeto.isConcluded === "true") {
+        objeto.isConcluded = "false";
+      }
+    }
+
+    setToDo([...toDo])
   };
 
   const editCountCompletedToDo = () => {
     let count = 0;
 
     toDo.map(todo => {
-      if (todo.isConcluded === "false") {
+      if (todo.isConcluded === "true") {
         count += 1;
       }
     });
@@ -84,6 +78,12 @@ export const App = () => {
     }])
   }
 
+  const numberOfToDo = toDo.length
+
+  if (numberOfToDo === 0) {
+
+  }
+
   return (
 
     <div>
@@ -95,22 +95,25 @@ export const App = () => {
       />
 
       <TodoListComponent
-        numberOfToDo={toDo.length}
+        numberOfToDo={numberOfToDo}
         countCompletedToDo={countCompletedToDo}
       />
 
-      {toDo.map(toDo => {
-        return (
-          <TodoItem
-            key={toDo.id}
-            text={toDo.text}
-            isConcluded={toDo.isConcluded}
-            deleteTodo={deleteTodo}
-            editTodoConcluded={editTodoConcluded}
-            editCountCompletedToDo={editCountCompletedToDo}
-          />
-        )
-      })}
+      { numberOfToDo === 0 ? <NoTodoComponent /> :
+      
+        toDo.map(toDo => {
+          return (
+            <TodoItem
+              key={toDo.id}
+              text={toDo.text}
+              isConcluded={toDo.isConcluded}
+              deleteTodo={deleteTodo}
+              editTodoConcluded={editTodoConcluded}
+              editCountCompletedToDo={editCountCompletedToDo}
+            />
+          )
+        })
+      }
 
     </div>
   )

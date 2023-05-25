@@ -33,43 +33,36 @@ export const App = () => {
     }
   ])
 
-  const [countCompletedToDo, setCountCompletedToDo] = useState(2)  
-  
+  const [countCompletedToDo, setCountCompletedToDo] = useState(2)
+
 
   const editTodoConcluded = (editTodo) => {
-
-    const ToDoEdited = toDo.filter(todo => todo.text === editTodo);
-
-    // console.log(ToDoEdited)
-
-
-    let minhaArray = toDo
-
-
-    minhaArray.map(item => {
-      if (item === editTodo) {
-        if (item.isConcluded === "false") {
-          item.isConcluded = "true";
-        } else {
-          item.isConcluded = "false";
+   
+      let objeto = toDo.find(obj => obj.text === editTodo);
+      
+      if (objeto) {
+        if(objeto.isConcluded === "false"){
+          objeto.isConcluded = "true";
+        } 
+        else if(objeto.isConcluded === "true")
+        {
+          objeto.isConcluded = "false";
         }
-      }
-      return item;
-    });  
+      }        
 
-    console.log(minhaArray)
+      setToDo([...toDo])
   };
 
   const editCountCompletedToDo = () => {
     let count = 0;
-  
+
     toDo.map(todo => {
       if (todo.isConcluded === "false") {
         count += 1;
       }
     });
-  
-    setCountCompletedToDo(count) ;
+
+    setCountCompletedToDo(count);
   }
 
   const deleteTodo = (toDoToDelete) => {
@@ -79,7 +72,7 @@ export const App = () => {
     setToDo(newToDo)
   }
 
-  const handleCreateNewToDo = () => {
+  const handleCreateNewToDo = (event) => {
     event.preventDefault()
 
     const newTodoText = event.target.addtodo.value
@@ -88,7 +81,7 @@ export const App = () => {
       id: uuidv4(),
       text: newTodoText,
       isConcluded: "false"
-    }])    
+    }])
   }
 
   return (

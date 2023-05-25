@@ -33,7 +33,7 @@ export const App = () => {
 
   const deleteTodo = (toDoToDelete) => {  
 
-    const newToDo = toDo.filter(todo => todo !== toDoToDelete);
+    const newToDo = toDo.filter(todo => todo.text !== toDoToDelete);
 
     setToDo(newToDo)
 }

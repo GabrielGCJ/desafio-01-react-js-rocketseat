@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import plus from "../../assets/plus.svg"
+
 import styles from "./TodoAdditionComponent.module.css"
 
 export const TodoAdditionComponent = ({ handleCreateNewToDo }) => {
@@ -34,7 +37,7 @@ export const TodoAdditionComponent = ({ handleCreateNewToDo }) => {
 
             <footer>
                 <button type="submit">
-                    Criar
+                   <strong>Criar</strong>  <img src={plus} alt="" />
                 </button>
             </footer>
         </form>

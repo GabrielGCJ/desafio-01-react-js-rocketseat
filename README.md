@@ -15,7 +15,7 @@ Apesar de serem poucas funcionalidades, foram necessario relembrar conceitos com
 - Estados
 - Imutabilidade do estado
 - Listas e chaves no ReactJS
-- Propriedades
+- Props
 - Componentização
 
 -----

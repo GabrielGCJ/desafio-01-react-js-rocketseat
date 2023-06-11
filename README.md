@@ -50,7 +50,7 @@ Rode o projeto:
 
 `npm run dev`
 
-Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a API:
+Acesse o endereço localhost porta 3001 em seu navegador ou ferramenta de testes para interagir com a API:
 
 http://localhost:3001
 

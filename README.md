@@ -45,7 +45,7 @@ Rode o projeto:
 
 Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a API:
 
-http://localhost:5173
+http://localhost:3001
 
 ----
 

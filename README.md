@@ -24,6 +24,13 @@ Apesar de serem poucas funcionalidades, foram necessario relembrar conceitos com
 
 https://www.figma.com/file/0IkWcIliZL6Uu8z4iEH8sJ/ToDo-List-%E2%80%A2-Desafio-React-Copy?fuid=1091194313930473885
 
+![image](https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat/assets/91347602/96cad20c-8c79-4fb0-b372-9a8b0031e496)
+
+![image](https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat/assets/91347602/2c490939-8780-4b14-a711-4ce3d96f0277)
+
+![image](https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat/assets/91347602/3bb94635-7ced-45a7-ade8-72334f1afa76)
+
+
 -----
 ### Para rodar o projeto:
 

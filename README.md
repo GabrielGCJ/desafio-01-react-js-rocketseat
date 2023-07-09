@@ -66,3 +66,13 @@ http://localhost:3001
 https://gb-todo-list.surge.sh
 
 ----
+
+### Artigos escritos pertinentes:
+
+#### <a href="https://dev.to/gabrielgcj/o-que-e-vite-e-quais-suas-vantagens-para-projetos-fron-end-3p5a">O que é Vite e quais suas vantagens para projetos fron-end?</a>
+
+#### <a href="https://dev.to/gabrielgcj/o-que-e-styled-components-e-quais-suas-vantagens-aos-seus-concorrentes-2h1o">O que é Styled Components e quais suas vantagens aos seus concorrentes?</a>
+
+#### <a href="https://dev.to/gabrielgcj/display-flex-20-propriedades-que-todo-desenvolvedor-deve-dominar-1ne5">Display-Flex, 20 propriedades que todo desenvolvedor deve dominar.</a>
+
+----

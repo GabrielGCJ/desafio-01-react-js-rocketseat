@@ -1,4 +1,5 @@
-import { useState } from "react"
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react"
 
 import { Header } from "./components/Header/Header"
 import { TodoAdditionComponent } from "./components/TodoAdditionComponent/TodoAdditionComponent"
@@ -61,7 +62,7 @@ export const App = () => {
     setCountCompletedToDo(count);
 
     return count
-  }
+  }  
 
   const deleteTodo = (toDoToDelete) => {
 
@@ -80,6 +81,8 @@ export const App = () => {
       isConcluded: "false"
     }])
   }
+
+  useEffect(() => {editCountCompletedToDo()}, [deleteTodo, handleCreateNewToDo])
 
   const numberOfToDo = toDo.length  
 

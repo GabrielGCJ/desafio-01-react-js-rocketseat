@@ -35,19 +35,27 @@ https://www.figma.com/file/0IkWcIliZL6Uu8z4iEH8sJ/ToDo-List-%E2%80%A2-Desafio-Re
 
 Clone este repositório em sua máquina:
 
-`git clone https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat.git`
+```
+git clone https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat.git
+```
 
 Entre na pasta do projeto:
 
-`cd desafio-01-react-js-rocketseat`
+```
+cd desafio-01-react-js-rocketseat
+```
 
 Instale o projeto:
 
-`npm install`
+```
+npm install
+```
 
 Rode o projeto:
 
-`npm run dev`
+```
+npm run dev
+```
 
 Acesse o endereço localhost porta 3001 em seu navegador ou ferramenta de testes para interagir com a API:
 

@@ -33,25 +33,25 @@ https://www.figma.com/file/0IkWcIliZL6Uu8z4iEH8sJ/ToDo-List-%E2%80%A2-Desafio-Re
 -----
 ### Para rodar o projeto:
 
-Clone este repositório em sua máquina:
+>Clone este repositório em sua máquina:
 
 ```
 git clone https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat.git
 ```
 
-Entre na pasta do projeto:
+>Entre na pasta do projeto:
 
 ```
 cd desafio-01-react-js-rocketseat
 ```
 
-Instale o projeto:
+>Instale o projeto:
 
 ```
 npm install
 ```
 
-Rode o projeto:
+>Rode o projeto:
 
 ```
 npm run dev
